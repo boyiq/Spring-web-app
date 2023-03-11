@@ -15,19 +15,22 @@ import java.util.List;
 public class HomeController {
     private List<House> houses = new ArrayList<>();
 
-    @GetMapping("/city")
-    public List<String> getCity() {
-        List<String> cityList = new ArrayList<>();
-        for (int i = 0; i < houses.size(); i ++) {
-            cityList.add(houses.get(i).getCity());
-        }
+    @GetMapping("/sales")
+    public String getAllSales () {
+        return "Here are all sales";
     }
+//    public List<String> getCity() {
+//        List<String> cityList = new ArrayList<>();
+//        for (int i = 0; i < houses.size(); i ++) {
+//            cityList.add(houses.get(i).getCity());
+//        }
+//    }
 
-    @PostMapping("/add")
-    public ResponseEntity<Void> create(@RequestBody House newHouse) {
-        houses.add(newHouse);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
-    }
+//    @PostMapping("/addsale")
+//    public ResponseEntity<Void> create(@RequestBody House newHouse) {
+//        houses.add(newHouse);
+//        return ResponseEntity.status(HttpStatus.CREATED).build();
+//    }
 
 
 
