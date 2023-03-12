@@ -18,11 +18,8 @@ public class HomeController {
     private SaleRepository salesRepository;
 
     @GetMapping("/sales")
-    public String getAllSales () {
-        return "Here are all sales";
+    public Iterable<Sales> getAllSales () {
+        Iterable<Sales> salesList = salesRepository.findAll();
+        return salesList;
     }
-
-
-
-
 }

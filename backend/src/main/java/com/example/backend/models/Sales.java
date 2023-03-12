@@ -6,26 +6,26 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="sales")
-public class Sales extends BaseEntity{
+public class Sales {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     @Column(name = "id")
-    private int saleId;
+    public int saleId;
 
     @NotBlank(message="number of bedrooms must not be blank")
-    private int beds;
+    public int beds;
 
     @NotBlank(message="number of bathrooms must not be blank")
-    private int baths;
+    public int baths;
 
     @NotBlank(message="size of house must not be blank")
-    private int size;
+    public int size;
 
     @NotBlank(message = "zip code of house must not be blank")
-    @Column(length = 5)
-    private String zipCode;
+    @Column(length = 5, name="zipcode")
+    public String zipCode;
 
     @NotBlank(message = "sale price must not be blank")
-    private int price;
+    public int price;
 }
