@@ -6,7 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="sales")
-public class Sales {
+public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
