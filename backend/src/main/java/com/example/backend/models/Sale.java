@@ -13,19 +13,19 @@ public class Sale {
     @Column(name = "id")
     public int saleId;
 
-    @NotBlank(message="number of bedrooms must not be blank")
+    @NotNull(message="number of bedrooms must not be blank")
     public int beds;
 
-    @NotBlank(message="number of bathrooms must not be blank")
+    @NotNull(message="number of bathrooms must not be blank")
     public int baths;
 
-    @NotBlank(message="size of house must not be blank")
+    @NotNull(message="size of house must not be blank")
     public int size;
 
     @NotBlank(message = "zip code of house must not be blank")
     @Column(length = 5, name="zipcode")
     public String zipCode;
 
-    @NotBlank(message = "sale price must not be blank")
+    @NotNull(message = "sale price must not be blank")
     public int price;
 }
